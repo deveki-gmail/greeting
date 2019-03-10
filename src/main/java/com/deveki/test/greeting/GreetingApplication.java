@@ -19,6 +19,7 @@ public class GreetingApplication {
 	
 	@GetMapping("/hi/{name}")
 	public String hi(@PathVariable("name") String name){
+		System.out.println("inside hi method....");
 		if(StringUtils.isEmpty(name)){
 			return "Hi User";
 		}
@@ -27,6 +28,7 @@ public class GreetingApplication {
 	
 	@PostMapping("/hi")
 	public GreetingResponse hiPost(@RequestBody(required = true) GreetingRequest req){
+		System.out.println("inside hiPost method....");
 		if(req == null || (req.getName() == null || "".equals(req.getName()))){
 			GreetingResponse res = new GreetingResponse();
 			res.setErrorMessage("Name is required.");
