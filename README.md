@@ -14,7 +14,7 @@ curl -X GET \
   http://localhost:8080/hi/deveki
 
 
-<b>After clone make the docker build:</b>
+<b>After clone make the docker build:</b><br>
 sudo docker build -t greeting .
 
 <b>After build run it with below mention run commands:</b>
