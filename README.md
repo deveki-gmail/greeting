@@ -12,3 +12,10 @@ curl -X POST \
 
 curl -X GET \
   http://localhost:8080/hi/deveki
+
+
+<b>After clone make the docker build:</b>
+sudo docker build -t greeting .
+After build run it:
+sudo docker run -e PORT=8085 greeting
+sudo docker run -e PORT=8084 greeting
